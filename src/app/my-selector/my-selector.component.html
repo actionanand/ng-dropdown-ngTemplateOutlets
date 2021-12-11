@@ -1,0 +1,33 @@
+<div class="app-selector">
+  <button type="button">
+    <ng-template #defaultSelected>
+      {{ picked?.name || label }}
+    </ng-template>
+
+    <ng-container
+      [ngTemplateOutlet]="selectedTemplateRef || defaultSelected"
+      [ngTemplateOutletContext]="{ $implicit: picked }"
+    >
+    </ng-container>
+    <span class="caret"></span>
+  </button>
+
+  <ul>
+    <li
+      *ngFor="let option of options; index as i"
+      (click)="selectOption(option)"
+    >
+      <ng-template #defaultOption>
+        <a class="dropdown-item">
+          {{ option?.name || option }}
+        </a>
+      </ng-template>
+
+      <ng-container
+        [ngTemplateOutlet]="optionTemplateRef || defaultOption"
+        [ngTemplateOutletContext]="{ $implicit: option, index: i }"
+      >
+      </ng-container>
+    </li>
+  </ul>
+</div>
