@@ -6,21 +6,18 @@ import { Component, ContentChild, EventEmitter, Input, OnInit, Output, TemplateR
   styleUrls: ['./my-selector.component.sass']
 })
 export class MySelectorComponent<T extends { name: string }> {
+
   picked!: T;
 
-  @Input()
-  label!: string;
-  @Input()
-  options!: T[];
+  @Input() label!: string;
+  
+  @Input() options!: T[];
 
-  @Input("selectedTemplate")
-  selectedTemplateRef!: TemplateRef<any>;
+  @Input('selectedTemplate') selectedTemplateRef!: TemplateRef<any>;
 
-  @ContentChild("optionTemplate", { static: false })
-  optionTemplateRef!: TemplateRef<any>;
+  @ContentChild('optionTemplate') optionTemplateRef!: TemplateRef<any>;
 
-  @Output()
-  selectionChanged = new EventEmitter<T>();
+  @Output() selectionChanged = new EventEmitter<T>();
 
   selectOption(option: T) {
     this.picked = option;

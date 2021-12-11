@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MySelectorComponent } from './my-selector/my-selector.component';
 import { ClientSharkComponent } from './client-shark/client-shark.component';
 import { ClientTractorComponent } from './client-tractor/client-tractor.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ClientTractorComponent } from './client-tractor/client-tractor.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

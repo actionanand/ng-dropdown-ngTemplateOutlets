@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { faSkullCrossbones, faSwimmer } from '@fortawesome/free-solid-svg-icons';
 
 export interface Shark {
   name: string;
@@ -14,27 +16,27 @@ export interface Shark {
 export class ClientSharkComponent {
   sharks: Shark[] = [
     {
-      name: "Great White",
-      latinName: "Carcharodon carcharias",
-      status: "Vunerable",
+      name: 'Great White',
+      latinName: 'Carcharodon carcharias',
+      status: 'Vunerable',
     },
     {
-      name: "Great hammerhead",
-      latinName: "Sphyrna mokarran",
-      status: "Endangered",
+      name: 'Great hammerhead',
+      latinName: 'Sphyrna mokarran',
+      status: 'Endangered',
     },
     {
-      name: "Angular roughshark",
-      latinName: "Oxynotus centrina",
-      status: "Vunerable",
+      name: 'Angular roughshark',
+      latinName: 'Oxynotus centrina',
+      status: 'Vunerable',
     },
     {
-      name: "Pyjama",
-      latinName: "Poroderma africanum",
-      status: "Near Threatend",
+      name: 'Pyjama',
+      latinName: 'Poroderma africanum',
+      status: 'Near Threatend',
     },
   ];
-  safeSharks = ["Angular roughshark", "Pyjama"];
+  safeSharks = ['Angular roughshark', 'Pyjama'];
   selectedShark: Shark = {} as Shark;
 
   displayFunc = (shark: Shark) => {
@@ -42,8 +44,7 @@ export class ClientSharkComponent {
   };
 
   getSwimIcon = (shark: Shark) => {
-    const icon = ''
-      // this.safeSharks.indexOf(shark.name) >= 0 ? faSwimmer : faSkullCrossbones;
+    const icon = this.safeSharks.indexOf(shark.name) >= 0 ? faSwimmer : faSkullCrossbones;
     return icon;
   };
 }
