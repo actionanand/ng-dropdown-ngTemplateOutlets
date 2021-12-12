@@ -1,32 +1,33 @@
-<div class="app-selector">
-  <button type="button">
+<div class="selector-container">
+  <button type="button" (click)="isDropDownOpen = !isDropDownOpen" class="btn-dropdown-green">
     <ng-template #defaultSelected>
       {{ picked?.name || label }}
     </ng-template>
 
     <ng-container
       [ngTemplateOutlet]="selectedTemplateRef || defaultSelected"
-      [ngTemplateOutletContext]="{ $implicit: picked }"
-    >
+      [ngTemplateOutletContext]="{ $implicit: picked }">
     </ng-container>
-    <span class="caret"></span>
+
+    <span class="selector-container-caret">
+      <fa-icon *ngIf="isDropDownOpen; else dropDownIsClosed" [icon]="iconUp"></fa-icon>
+      <ng-template #dropDownIsClosed>
+        <fa-icon [icon]="iconDown"></fa-icon>
+      </ng-template>
+    </span>
   </button>
 
-  <ul>
-    <li
-      *ngFor="let option of options; index as i"
-      (click)="selectOption(option)"
-    >
+  <ul *ngIf="isDropDownOpen" class="selector-container-dropdown-menu">
+    <li *ngFor="let option of options; index as i" (click)="selectOption(option)">
       <ng-template #defaultOption>
-        <a class="dropdown-item">
+        <a class="selector-container-dropdown-item">
           {{ option?.name || option }}
         </a>
       </ng-template>
 
       <ng-container
         [ngTemplateOutlet]="optionTemplateRef || defaultOption"
-        [ngTemplateOutletContext]="{ $implicit: option, index: i }"
-      >
+        [ngTemplateOutletContext]="{ $implicit: option, index: i }">
       </ng-container>
     </li>
   </ul>

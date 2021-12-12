@@ -1,4 +1,6 @@
-import { Component, ContentChild, EventEmitter, Input, OnInit, Output, TemplateRef } from '@angular/core';
+import { Component, ContentChild, EventEmitter, Input, Output, TemplateRef } from '@angular/core';
+
+import { faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-my-selector',
@@ -18,6 +20,11 @@ export class MySelectorComponent<T extends { name: string }> {
   @ContentChild('optionTemplate') optionTemplateRef!: TemplateRef<any>;
 
   @Output() selectionChanged = new EventEmitter<T>();
+
+  isDropDownOpen = false;
+
+  iconDown = faCaretDown;
+  iconUp = faCaretUp;
 
   selectOption(option: T) {
     this.picked = option;

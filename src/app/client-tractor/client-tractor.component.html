@@ -4,19 +4,21 @@
 
 <!-- Using @Input to pass template into component -->
 <ng-template #selectedTemplate let-tractor>
-  {{ tractor?.name || "Tractor" }}
+  {{ tractor?.name || 'Tractor' }}
 </ng-template>
 
 <app-my-selector [options]="tractors" [selectedTemplate]="selectedTemplate">
   <!-- Using @ContentChild to pass template into component -->
   <ng-template #optionTemplate let-tractor let-id="index">
-    <div>
-      <div>
+    <div class="tractor-container-dropdown-item">
+      <div class="tractor-container-dropdown-item-name">
         <b>{{ tractor.name }}</b>
       </div>
-      <img height="100" width="150" src="{{ tractor.img }}" />
-      <span *ngFor="let i of [].constructor(tractor.stars)"> &#x2B50;</span>
-      <button class="btn btn-danger" style="width:100%">Buy Now!</button>
+      <img src="{{ tractor.img }}" class="tractor-container-dropdown-item-img"/>
+      <div>
+        <span *ngFor="let i of [].constructor(tractor.stars)" class="tractor-container-dropdown-item-rate"> &#x2B50;</span>
+      </div>
+      <button class="btn-tractor-buy" style="width:100%">Buy Now!</button>
     </div>
   </ng-template>
 </app-my-selector>

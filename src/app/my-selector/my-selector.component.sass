@@ -1,0 +1,49 @@
+// button style
+.btn-dropdown-green 
+	background: #1AAB8A 
+	color: #fff 
+	border: none 
+	position: relative 
+	height: 2.1rem 
+	font-size: 1rem 
+	padding: .3rem .4rem 
+	cursor: pointer 
+	transition: 800ms ease all 
+	outline: none 
+	&:hover 
+		background: #fff 
+		color: #1AAB8A 
+	&:after 
+		right: inherit 
+		top: inherit 
+		left: 0 
+		bottom: 0 
+.btn-dropdown-green:before,.btn-dropdown-green:after 
+	content: '' 
+	position: absolute 
+	top: 0 
+	right: 0 
+	height: 2px 
+	width: 0 
+	background: #1AAB8A 
+	transition: 400ms ease all 
+.btn-dropdown-green:hover:before,.btn-dropdown-green:hover:after 
+	width: 100% 
+	transition: 800ms ease all 
+
+// dropdown menu
+.selector-container-dropdown-menu 
+	position: absolute 
+	z-index: 1000 
+	float: left 
+	min-width: 10rem 
+	padding: 0.5rem 0 
+	margin: 0.125rem 0 0 
+	font-size: 1rem 
+	color: #212529 
+	text-align: left 
+	list-style: none 
+	background-color: #fff 
+	background-clip: padding-box 
+	border: 1px solid rgba(0,0,0,.15) 
+	border-radius: 0.25rem 
