@@ -29,5 +29,6 @@ export class MySelectorComponent<T extends { name: string }> {
   selectOption(option: T) {
     this.picked = option;
     this.selectionChanged.emit(option);
+    this.isDropDownOpen = !this.isDropDownOpen;
   }
 }
