@@ -1,5 +1,5 @@
 <div class="selector-container">
-  <button type="button" (click)="isDropDownOpen = !isDropDownOpen" class="btn-dropdown-green">
+  <button type="button" (click)="onFlipFlopDropdown()" class="btn-dropdown-green">
     <ng-template #defaultSelected>
       {{ picked?.name || label }}
     </ng-template>
@@ -17,8 +17,8 @@
     </span>
   </button>
 
-  <ul *ngIf="isDropDownOpen" class="selector-container-dropdown-menu">
-    <li *ngFor="let option of options; index as i" (click)="selectOption(option)">
+  <ul *ngIf="isDropDownOpen" class="selector-container-dropdown-menu" appClickOutside (clickOutside)="onClickOutside($event)">
+    <li *ngFor="let option of options; index as i" (click)="selectOption(option)" class="selector-container-dropdown-menu-list">
       <ng-template #defaultOption>
         <a class="selector-container-dropdown-item">
           {{ option?.name || option }}

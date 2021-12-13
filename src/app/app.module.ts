@@ -7,13 +7,15 @@ import { MySelectorComponent } from './my-selector/my-selector.component';
 import { ClientSharkComponent } from './client-shark/client-shark.component';
 import { ClientTractorComponent } from './client-tractor/client-tractor.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ClickOutsideDirective } from './directives/click-outside.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     MySelectorComponent,
     ClientSharkComponent,
-    ClientTractorComponent
+    ClientTractorComponent,
+    ClickOutsideDirective
   ],
   imports: [
     BrowserModule,

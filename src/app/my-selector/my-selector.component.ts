@@ -31,4 +31,17 @@ export class MySelectorComponent<T extends { name: string }> {
     this.selectionChanged.emit(option);
     this.isDropDownOpen = !this.isDropDownOpen;
   }
+
+  onClickOutside(event: boolean) {
+    event ? this.isDropDownOpen = false : ''
+    
+  }
+
+  // setting this as async to create a deley(onClickOutside emits true in the begining)
+  onFlipFlopDropdown() {
+    setTimeout(() => {
+      this.isDropDownOpen = !this.isDropDownOpen
+    }, 0)
+  }
+
 }

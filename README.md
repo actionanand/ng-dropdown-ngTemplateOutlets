@@ -14,3 +14,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 2. [angular-fontawesome](https://www.npmjs.com/package/@fortawesome/angular-fontawesome)
 3. [Agnostic components in Angular](https://indepth.dev/posts/1314/agnostic-components-in-angular)
 4. [CSS to SASS](https://jsonformatter.org/css-to-sass)
+5. [Angular 8/9 outside click Directive and unit test](https://medium.com/@ajantha.p.bandara/angular-8-9-click-outside-directive-2f0062837f9e)
+6. [What’s new in Angular v13!](https://blog.nrwl.io/whats-new-in-angular-v13-77246aca231f)
+7. [CSS BUTTONS](https://dev.to/gscode/20-css-buttons-4cni)
