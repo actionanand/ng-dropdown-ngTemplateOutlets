@@ -10,6 +10,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ClickOutsideDirective } from './directives/click-outside.directive';
 import { HeaderComponent } from './header/header.component';
 import { DropdownContainerComponent } from './pages/dropdown-container/dropdown-container.component';
+import { NgSelectComponent } from './pages/custom-select/ng-select/ng-select.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DropdownContainerComponent } from './pages/dropdown-container/dropdown-
     ClientTractorComponent,
     ClickOutsideDirective,
     HeaderComponent,
-    DropdownContainerComponent
+    DropdownContainerComponent,
+    NgSelectComponent
   ],
   imports: [
     BrowserModule,
