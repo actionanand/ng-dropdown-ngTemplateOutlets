@@ -3,12 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MySelectorComponent } from './my-selector/my-selector.component';
-import { ClientSharkComponent } from './client-shark/client-shark.component';
-import { ClientTractorComponent } from './client-tractor/client-tractor.component';
+import { MySelectorComponent } from './pages/dropdown-container/my-selector/my-selector.component';
+import { ClientSharkComponent } from './pages/dropdown-container/clients/client-shark/client-shark.component';
+import { ClientTractorComponent } from './pages/dropdown-container/clients/client-tractor/client-tractor.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ClickOutsideDirective } from './directives/click-outside.directive';
 import { HeaderComponent } from './header/header.component';
+import { DropdownContainerComponent } from './pages/dropdown-container/dropdown-container.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HeaderComponent } from './header/header.component';
     ClientSharkComponent,
     ClientTractorComponent,
     ClickOutsideDirective,
-    HeaderComponent
+    HeaderComponent,
+    DropdownContainerComponent
   ],
   imports: [
     BrowserModule,
