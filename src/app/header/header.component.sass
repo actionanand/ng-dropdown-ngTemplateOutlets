@@ -1,0 +1,40 @@
+/* Normalize the lists */
+.menu,
+.sub-menu 
+	margin: 0 
+	padding: 0 
+.sub-menu 
+	li 
+		margin: 0 
+/* Baseline for our menu */
+.navigation 
+	line-height: 1 
+	.menu 
+		a 
+			text-decoration: none 
+			color: currentColor 
+			padding: 1em 
+		li 
+			border-style: solid 
+			border-width: 0 0 1px 
+.navigation .menu a,
+.navigation .menu li 
+	display: block 
+
+.navigation 
+	background-color: #1AAB8A 
+	color: white 
+	.menu 
+		li 
+			border-color: white 
+.navigation .menu li:hover > a, .navigation .menu li:focus > a, .navigation .menu li:active > a 
+	color: #1AAB8A 
+	background-color: white 
+
+@media only screen and(min-width: 1024px) 
+	.navigation .menu 
+		display: flex
+		> li 
+			border-width: 0 1px 0 0
+			> a 
+				padding: 1.25em 1.5em
