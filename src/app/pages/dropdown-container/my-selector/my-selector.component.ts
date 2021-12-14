@@ -1,4 +1,4 @@
-import { Component, ContentChild, EventEmitter, Input, Output, TemplateRef } from '@angular/core';
+import { Component, ContentChild, EventEmitter, Input, OnInit, Output, TemplateRef } from '@angular/core';
 
 import { faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
 
@@ -7,7 +7,8 @@ import { faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './my-selector.component.html',
   styleUrls: ['./my-selector.component.sass']
 })
-export class MySelectorComponent<T extends { name: string }> {
+export class MySelectorComponent<T extends { name: string }> implements OnInit{
+
 
   picked!: T;
 
@@ -25,6 +26,12 @@ export class MySelectorComponent<T extends { name: string }> {
 
   iconDown = faCaretDown;
   iconUp = faCaretUp;
+
+  constructor() {}
+
+  ngOnInit(): void {
+  
+  }
 
   selectOption(option: T) {
     this.picked = option;

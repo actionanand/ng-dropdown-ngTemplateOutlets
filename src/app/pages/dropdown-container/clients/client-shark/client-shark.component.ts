@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { faSkullCrossbones, faSwimmer } from '@fortawesome/free-solid-svg-icons';
+
+import * as myClientData from '../client-data.json';
 
 export interface Shark {
   name: string;
@@ -13,29 +15,16 @@ export interface Shark {
   templateUrl: './client-shark.component.html',
   styleUrls: ['./client-shark.component.sass']
 })
-export class ClientSharkComponent {
-  sharks: Shark[] = [
-    {
-      name: 'Great White',
-      latinName: 'Carcharodon carcharias',
-      status: 'Vunerable',
-    },
-    {
-      name: 'Great hammerhead',
-      latinName: 'Sphyrna mokarran',
-      status: 'Endangered',
-    },
-    {
-      name: 'Angular roughshark',
-      latinName: 'Oxynotus centrina',
-      status: 'Vunerable',
-    },
-    {
-      name: 'Pyjama',
-      latinName: 'Poroderma africanum',
-      status: 'Near Threatend',
-    },
-  ];
+export class ClientSharkComponent implements OnInit {
+
+  clientDataObj: any = (myClientData as any).default;
+
+  constructor() {}
+
+  ngOnInit(): void {
+  }
+
+  sharks: Shark[] = this.clientDataObj.sharks;
   safeSharks = ['Angular roughshark', 'Pyjama'];
   selectedShark: Shark = {} as Shark;
 
