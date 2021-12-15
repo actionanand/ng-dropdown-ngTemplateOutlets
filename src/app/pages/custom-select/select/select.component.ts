@@ -5,13 +5,14 @@ import { debounceTime, filter, fromEvent, takeUntil } from 'rxjs';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import Popper from 'popper.js';
 
+@UntilDestroy()
 @Component({
   selector: 'app-select',
   templateUrl: './select.component.html',
   styleUrls: ['./select.component.sass']
 })
 export class SelectComponent implements OnInit, OnDestroy {
-  @Input() model;
+  @Input() model: any;
   @Input() labelKey = 'label';
   @Input() idKey = 'id';
   @Input() options: any[] = [];
