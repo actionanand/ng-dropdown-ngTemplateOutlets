@@ -21,6 +21,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 9. [CSS BUTTONS](https://dev.to/gscode/20-css-buttons-4cni)
 10. [Simple CSS Nav bar](https://w3bits.com/css-html-menu/)
 11. [Create a Custom Select Component in Angular, Complete with Virtual Scrolling](https://netbasal.com/create-a-custom-select-component-in-angular-complete-with-virtual-scrolling-c29e24f72006)
+    - [Ng Select original repo](https://github.com/NetanelBasal/ng-select)
     - [Unsubscribe For Pros - @ngneat/until-destroy](https://www.npmjs.com/package/@ngneat/until-destroy)
     - [GitHub - @ngneat/until-destroy](https://github.com/ngneat/until-destroy/#use-with-ivy)
     - [Angular - Unsubscribe For Pros](https://www.npmjs.com/package/ngx-take-until-destroy)
