@@ -1,9 +1,11 @@
-<p>
-	And here's some amazing content. It's very engaging. Right?
-</p>
-
-<code>Skills: {{skills | json}}</code>
-
-<div style="display: flex; justify-content: flex-end; margin-top: 10px;">
-	<a class="button is-danger is-small" (click)="close()">Close</a>
+<div class="popover-component-wrapper">
+  <p class="popover-component-wrapper-text">
+    I'm an entry component(Inside popover component). And injected using popover. It's very interesting. Right?
+  </p>
+  
+  <code class="popover-component-wrapper-code">Skills: {{skills | json}}</code>
+  
+  <div class="popover-component-wrapper-component">
+    <a class="popover-component-wrapper-component-btn" (click)="close()">Close</a>
+  </div>
 </div>

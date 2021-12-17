@@ -1,3 +1,28 @@
-:host {
-  display: block;
+.popover-component-wrapper {
+
+  &-text {
+
+  }
+
+  &-code {
+
+  }
+
+  &-component {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+
+    &-btn {
+      background-color: red;
+      color: white;
+      padding: 2px;
+      border: 2px red solid;
+      &:hover {
+        background-color: white;
+        color: red;
+        cursor: pointer;
+      }
+    }
+  }
 }

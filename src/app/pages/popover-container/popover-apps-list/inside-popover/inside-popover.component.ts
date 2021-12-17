@@ -7,7 +7,9 @@ import { PopoverRef } from '../../popover/shared/popover-ref';
   styleUrls: ['./inside-popover.component.scss']
 })
 export class InsidePopoverComponent implements OnInit {
+
   skills;
+  
   constructor(private popoverRef: PopoverRef) {
     this.skills = this.popoverRef.data.skills;
   }
@@ -18,4 +20,5 @@ export class InsidePopoverComponent implements OnInit {
   close() {
     this.popoverRef.close({ id: 1 });
   }
+
 }

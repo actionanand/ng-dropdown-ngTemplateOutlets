@@ -13,6 +13,7 @@ export type PopoverParams<T> = {
   origin: HTMLElement;
   content: PopoverContent;
   data?: T | any;
+  backdropClass?: string;
 }
 
 @Injectable({
@@ -21,8 +22,8 @@ export type PopoverParams<T> = {
 export class Popover {
   constructor(private overlay: Overlay, private injector: Injector) { }
 
-  open<T>({ origin, content, data, width, height }: PopoverParams<T>): PopoverRef<T> {
-    const overlayRef = this.overlay.create(this.getOverlayConfig({ origin, width, height }));
+  open<T>({ origin, content, data, width, height, backdropClass = 'popover-backdrop' }: PopoverParams<T>): PopoverRef<T> {
+    const overlayRef = this.overlay.create(this.getOverlayConfig({ origin, width, height, backdropClass }));
     const popoverRef = new PopoverRef<T>(overlayRef, content, data);
 
     const injector = this.createInjector(popoverRef, this.injector);
@@ -30,12 +31,12 @@ export class Popover {
     return popoverRef;
   }
 
-  private getOverlayConfig({ origin, width, height }: any): OverlayConfig  {
+  private getOverlayConfig({ origin, width, height, backdropClass }: any): OverlayConfig  {
     return new OverlayConfig({
       hasBackdrop: true,
       width,
       height,
-      backdropClass: 'popover-backdrop',
+      backdropClass,
       positionStrategy: this.getOverlayPosition(origin),
       scrollStrategy: this.overlay.scrollStrategies.reposition()
     });
