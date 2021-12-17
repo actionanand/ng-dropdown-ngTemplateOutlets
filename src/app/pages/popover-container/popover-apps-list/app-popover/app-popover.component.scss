@@ -43,4 +43,26 @@
       bottom:0;
     }
   }
+
+  &-template {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+
+    &-btn {
+      background-color: red;
+      color: white;
+      padding: 2px;
+      border: 2px red solid;
+      &:hover {
+        background-color: white;
+        color: red;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.my-custom-backdrop-for-this-component {
+  background: green;
 }
