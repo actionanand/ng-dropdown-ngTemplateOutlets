@@ -34,8 +34,8 @@ import { InsidePopoverComponent } from './pages/popover-container/inside-popover
     NgSelectComponent,
     SelectComponent,
     AutofocusDirective,
-    PopoverComponent,
     AppPopoverComponent,
+    PopoverComponent,
     InsidePopoverComponent
   ],
   imports: [

@@ -26,3 +26,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
     - [GitHub - @ngneat/until-destroy](https://github.com/ngneat/until-destroy/#use-with-ivy)
     - [Angular - Unsubscribe For Pros](https://www.npmjs.com/package/ngx-take-until-destroy)
     - [Tooltip & Popover Positioning Engine - @popperjs/core](https://www.npmjs.com/package/@popperjs/core)
+12. [Creating Powerful Components with Angular CDK](https://netbasal.com/creating-powerful-components-with-angular-cdk-2cef53d81cea)
+    - [stackblitz](https://stackblitz.com/edit/netbasal-articles-qwvqy4)
+    - [WeakMap and WeakSet](https://javascript.info/weakmap-weakset)
