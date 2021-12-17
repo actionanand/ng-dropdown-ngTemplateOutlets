@@ -1,0 +1,11 @@
+<!-- using template to show in popover -->
+<div class="popover-template-wrapper">
+	<a class="popover-template-wrapper-btn" (click)="show(tpl, origin)" #origin>Popover</a>
+</div>
+
+<ng-template #tpl let-close="close">
+	And here's some amazing content. It's very engaging. Right?
+	<div style="display: flex; justify-content: flex-end; margin-top: 10px;">
+		<a class="button is-danger is-small" (click)="close({id: 2})">Close</a>
+	</div>
+</ng-template>

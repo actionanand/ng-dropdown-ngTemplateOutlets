@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { ScrollingModule } from '@angular/cdk/scrolling';
+import { ScrollingModule } from '@angular/cdk/scrolling'; // for virtual scrolling
+import { OverlayModule } from '@angular/cdk/overlay'; // needed for popover
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +18,9 @@ import { DropdownContainerComponent } from './pages/dropdown-container/dropdown-
 import { NgSelectComponent } from './pages/custom-select/ng-select/ng-select.component';
 import { SelectComponent } from './pages/custom-select/select/select.component';
 import { AutofocusDirective } from './directives/autofocus.directive';
+import { PopoverComponent } from './pages/popover-container/popover/popover.component';
+import { AppPopoverComponent } from './pages/popover-container/popover-apps-list/app-popover/app-popover.component';
+import { InsidePopoverComponent } from './pages/popover-container/popover-apps-list/inside-popover/inside-popover.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,10 @@ import { AutofocusDirective } from './directives/autofocus.directive';
     DropdownContainerComponent,
     NgSelectComponent,
     SelectComponent,
-    AutofocusDirective
+    AutofocusDirective,
+    AppPopoverComponent,
+    PopoverComponent,
+    InsidePopoverComponent
   ],
   imports: [
     BrowserModule,
@@ -37,9 +44,11 @@ import { AutofocusDirective } from './directives/autofocus.directive';
     FontAwesomeModule,
     BrowserAnimationsModule,
     ScrollingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    OverlayModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [PopoverComponent, InsidePopoverComponent]
 })
 export class AppModule { }
