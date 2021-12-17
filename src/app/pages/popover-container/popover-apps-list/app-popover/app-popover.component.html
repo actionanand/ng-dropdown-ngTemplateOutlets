@@ -1,4 +1,7 @@
-<a class="button is-primary" (click)="show(tpl, origin)" #origin>Popover</a>
+<!-- using template to show in popover -->
+<div class="popover-template-wrapper">
+	<a class="popover-template-wrapper-btn" (click)="show(tpl, origin)" #origin>Popover</a>
+</div>
 
 <ng-template #tpl let-close="close">
 	And here's some amazing content. It's very engaging. Right?

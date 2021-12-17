@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PopoverRef } from '../popover/shared/popover-ref';
+import { PopoverRef } from '../../popover/shared/popover-ref';
 
 @Component({
-  selector: 'app-inside-popover',
   templateUrl: './inside-popover.component.html',
   styleUrls: ['./inside-popover.component.scss']
 })

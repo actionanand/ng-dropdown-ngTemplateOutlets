@@ -19,8 +19,8 @@ import { NgSelectComponent } from './pages/custom-select/ng-select/ng-select.com
 import { SelectComponent } from './pages/custom-select/select/select.component';
 import { AutofocusDirective } from './directives/autofocus.directive';
 import { PopoverComponent } from './pages/popover-container/popover/popover.component';
-import { AppPopoverComponent } from './pages/popover-container/app-popover/app-popover.component';
-import { InsidePopoverComponent } from './pages/popover-container/inside-popover/inside-popover.component';
+import { AppPopoverComponent } from './pages/popover-container/popover-apps-list/app-popover/app-popover.component';
+import { InsidePopoverComponent } from './pages/popover-container/popover-apps-list/inside-popover/inside-popover.component';
 
 @NgModule({
   declarations: [
