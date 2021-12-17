@@ -1,11 +1,14 @@
 <!-- using template to show in popover -->
 <div class="popover-template-wrapper">
-	<a class="popover-template-wrapper-btn" (click)="show(tpl, origin)" #origin>Popover</a>
+	<a class="popover-template-wrapper-btn" (click)="show(tpl, origin, 'template')" #origin>Popover Template</a>
+	<a class="popover-template-wrapper-btn" (click)="show(tpl, origin2, 'component')" #origin2>Popover Component</a>
+	<a class="popover-template-wrapper-btn" (click)="show(tpl, origin3, 'text')" #origin3>Popover Text</a>
 </div>
 
-<ng-template #tpl let-close="close">
+<!-- template will be used in the popover -->
+<ng-template #tpl let-onClose="close">
 	And here's some amazing content. It's very engaging. Right?
 	<div class="popover-template-wrapper-template">
-		<a class="popover-template-wrapper-template-btn" (click)="close({id: 2})">Close</a>
+		<a class="popover-template-wrapper-template-btn" (click)="onClose({id: 2})">Close</a>
 	</div>
 </ng-template>

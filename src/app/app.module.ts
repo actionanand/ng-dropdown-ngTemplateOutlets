@@ -20,6 +20,7 @@ import { SelectComponent } from './pages/custom-select/select/select.component';
 import { AutofocusDirective } from './directives/autofocus.directive';
 import { PopoverComponent } from './pages/popover-container/popover/popover.component';
 import { AppPopoverComponent } from './pages/popover-container/popover-apps-list/app-popover/app-popover.component';
+import { InsidePopoverComponent } from './pages/popover-container/popover-apps-list/inside-popover/inside-popover.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AppPopoverComponent } from './pages/popover-container/popover-apps-list
     SelectComponent,
     AutofocusDirective,
     AppPopoverComponent,
-    PopoverComponent
+    PopoverComponent,
+    InsidePopoverComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +49,6 @@ import { AppPopoverComponent } from './pages/popover-container/popover-apps-list
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [PopoverComponent]
+  entryComponents: [PopoverComponent, InsidePopoverComponent]
 })
 export class AppModule { }

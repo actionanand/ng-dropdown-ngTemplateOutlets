@@ -1,8 +1,9 @@
 .popover-template-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 2rem;
+  padding: 0 3rem;
   
   &-btn {
     background:#1AAB8A;
