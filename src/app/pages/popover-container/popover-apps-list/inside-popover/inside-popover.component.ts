@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 
 import { PopoverRef } from '../../popover/shared/popover-ref';
 
@@ -10,12 +10,13 @@ export class InsidePopoverComponent implements OnInit {
 
   skills;
   
-  constructor(private popoverRef: PopoverRef) {
+  constructor( private popoverRef: PopoverRef ) {
     this.skills = this.popoverRef.data.skills;
   }
 
   ngOnInit(): void {
   }
+
 
   close() {
     this.popoverRef.close({ id: 1 });

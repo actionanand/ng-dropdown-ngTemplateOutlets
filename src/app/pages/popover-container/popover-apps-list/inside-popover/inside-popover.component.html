@@ -1,6 +1,6 @@
-<div class="popover-component-wrapper">
-  <p class="popover-component-wrapper-text">
-    I'm an entry component(Inside popover component). And injected using popover. It's very interesting. Right?
+<div class="popover-component-wrapper" appAddCssClass [cssSelector]="'.popover-container'" [cssClass]="'custom-popover-wrap'">
+  <p class="popover-component-wrapper-text" appAddCssClass [cssSelector]="'.popover'" [cssClass]="'custom-popover-content'">
+    I'm an entry component(Inside popover component) & centered using dynamic classes. And injected using popover.
   </p>
   
   <code class="popover-component-wrapper-code">Skills: {{skills | json}}</code>
