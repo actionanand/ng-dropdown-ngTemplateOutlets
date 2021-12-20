@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Host, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, Host, OnInit } from '@angular/core';
 import { AddCssClassHeaderWrapDirective } from '../directives/addCssClass-header-wrap/add-css-class-header-wrap.directive';
 
 @Component({
@@ -6,18 +6,9 @@ import { AddCssClassHeaderWrapDirective } from '../directives/addCssClass-header
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.sass']
 })
-export class HeaderComponent implements OnInit, AfterViewInit {
+export class HeaderComponent implements OnInit {
 
-  constructor(@Host() private customClassDirective: AddCssClassHeaderWrapDirective, private elRef: ElementRef,
-  private renderer: Renderer2) { }
-
-  ngAfterViewInit(): void {
-    setTimeout(() => {
-      const parentElement = this.elRef.nativeElement.closest('.header-wrap');
-      this.renderer.addClass(parentElement, 'cool');
-      console.log(parentElement)
-    }, 3000);
-  }
+  constructor( @Host() private customClassDirective: AddCssClassHeaderWrapDirective ) { }
 
   ngOnInit(): void {
     // adding custom class to parent
