@@ -35,7 +35,7 @@ export class AppPopoverComponent implements OnInit {
         skills: [1, 2, 3, 4, 5]
       },
       // width: '30px', // width of the popover
-      backdropClass: 'my-custom-backdrop-for-this-component' // make ViewEncapsulation as none to get the effect
+      backdropClass: 'my-custom-backdrop-for-this-component' // make ViewEncapsulation as none to get the effect or use ::ng-deep
     });
 
     ref.afterClosed$.subscribe(res => {

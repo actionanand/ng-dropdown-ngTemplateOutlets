@@ -29,3 +29,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 12. [Creating Powerful Components with Angular CDK](https://netbasal.com/creating-powerful-components-with-angular-cdk-2cef53d81cea)
     - [stackblitz](https://stackblitz.com/edit/netbasal-articles-qwvqy4)
     - [WeakMap and WeakSet](https://javascript.info/weakmap-weakset)
+13. [Querying For The Closest Parent Element in Angular - add css class to parent using directive](https://netbasal.com/querying-for-the-closest-parent-element-in-angular-b2554d60c47e)

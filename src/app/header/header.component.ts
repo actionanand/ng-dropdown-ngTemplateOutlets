@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Host, OnInit } from '@angular/core';
+import { AddCssClassHeaderWrapDirective } from '../directives/addCssClass-header-wrap/add-css-class-header-wrap.directive';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Host() private customClassDirective: AddCssClassHeaderWrapDirective) { }
 
   ngOnInit(): void {
+    // adding custom class to parent
+    this.customClassDirective.addCustomClass();
   }
 
 }
