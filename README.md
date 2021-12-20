@@ -30,3 +30,5 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
     - [stackblitz](https://stackblitz.com/edit/netbasal-articles-qwvqy4)
     - [WeakMap and WeakSet](https://javascript.info/weakmap-weakset)
 13. [Querying For The Closest Parent Element in Angular - add css class to parent using directive](https://netbasal.com/querying-for-the-closest-parent-element-in-angular-b2554d60c47e)
+    - [How to REALLY center an HTML element (via CSS position absolute/fixed)](https://coderwall.com/p/quutdq/how-to-really-center-an-html-element-via-css-position-absolute-fixed)
+    - [A curious case of the @Host decorator and Element Injectors in Angular](https://indepth.dev/posts/1063/a-curious-case-of-the-host-decorator-and-element-injectors-in-angular)
