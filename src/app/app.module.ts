@@ -22,6 +22,7 @@ import { PopoverComponent } from './pages/popover-container/popover/popover.comp
 import { AppPopoverComponent } from './pages/popover-container/popover-apps-list/app-popover/app-popover.component';
 import { InsidePopoverComponent } from './pages/popover-container/popover-apps-list/inside-popover/inside-popover.component';
 import { AddCssClassHeaderWrapDirective } from './directives/addCssClass-header-wrap/add-css-class-header-wrap.directive';
+import { AddCssClassDirective } from './directives/query-and-addCssClass-to-parent/add-css-class.directive';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AddCssClassHeaderWrapDirective } from './directives/addCssClass-header-
     AppPopoverComponent,
     PopoverComponent,
     InsidePopoverComponent,
-    AddCssClassHeaderWrapDirective
+    AddCssClassHeaderWrapDirective,
+    AddCssClassDirective
   ],
   imports: [
     BrowserModule,

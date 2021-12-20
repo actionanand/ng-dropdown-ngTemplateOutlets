@@ -26,3 +26,17 @@
     }
   }
 }
+
+::ng-deep
+.custom-popover-wrap {
+  position:fixed;
+  left:50%;
+  top: 50%;
+}
+
+::ng-deep
+.custom-popover-content {
+  position:relative; 
+  left:-50%;
+  top: -50%;
+}

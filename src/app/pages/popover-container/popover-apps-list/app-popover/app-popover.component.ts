@@ -10,7 +10,7 @@ import { InsidePopoverComponent } from '../inside-popover/inside-popover.compone
   // encapsulation: ViewEncapsulation.None 
 })
 export class AppPopoverComponent implements OnInit {
-  popoverString = 'my string';
+  popoverString = 'I\'m through popover string!';
 
   constructor(private popover: Popover) {}
 
